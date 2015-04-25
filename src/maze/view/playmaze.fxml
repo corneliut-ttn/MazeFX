@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;file:///D:/UAIC-ComputerScience/UAIC/AnII-Sem2/PA-Java/MazeFX/utils/playmaze.png&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maze.controller.PlaymazeController">
+    <top>
+        <Label text="I want YOU to play a game" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Segoe Print Bold" size="35.0" />
+            </font>
+            <textFill>
+                <LinearGradient cycleMethod="REFLECT" endX="0.5809523809523809" endY="1.0" startX="0.8952380952380953" startY="0.5095238095238095">
+                    <stops>
+                        <Stop color="#110b0b" />
+                        <Stop color="#110b0b" offset="0.007662835249042145" />
+                        <Stop color="#0700ed" offset="0.44061302681992337" />
+                        <Stop color="#0f0a0a" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <effect>
+                <Glow level="0.33" />
+            </effect>
+        </Label>
+    </top>
+    <right>
+        <Pane prefHeight="350.0" prefWidth="100.0" style="-fx-background-color: rgba(187, 255, 0, 0.2);" BorderPane.alignment="CENTER">
+            <children>
+                <AmbientLight color="CHARTREUSE" layoutX="49.0" layoutY="49.0" lightOn="true">
+                    <effect>
+                        <MotionBlur />
+                    </effect>
+                </AmbientLight>
+                <Sphere fx:id="sphere" layoutX="49.0" layoutY="113.0" opacity="0.75" radius="15.0">
+                    <effect>
+                        <DropShadow color="#031b9c" height="50.0" radius="24.5" spread="0.15" width="50.0" />
+                    </effect>
+                </Sphere>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" right="10.0" />
+            </BorderPane.margin>
+        </Pane>
+    </right>
+    <left>
+        <ToolBar orientation="VERTICAL" prefHeight="326.0" prefWidth="145.0" style="-fx-background-color: rgba(0, 115, 255, 0.5);" BorderPane.alignment="CENTER">
+            <items>
+                <Button mnemonicParsing="false" onAction="#createMaze" text="Generate Maze" textAlignment="CENTER" textFill="#720808" wrapText="true">
+                    <font>
+                        <Font name="Palatino Linotype" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                    </cursor>
+                </Button>
+                <TextField fx:id="mazeHeightTextField" promptText="height of maze" text="15" />
+                <TextField fx:id="mazeWidthTextField" promptText="width of maze" text="15" />
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#generateFromFile" text="Import from file...." textAlignment="CENTER" textFill="#720808" wrapText="true">
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="Palatino Linotype" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#solveRecursive" text="Solve Automatically" textAlignment="CENTER" textFill="#720808" wrapText="true">
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="Palatino Linotype" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveFile" text="Save as JPG" textAlignment="CENTER" textFill="#720808" wrapText="true">
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="Palatino Linotype" size="15.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#mazeSettingsON" text="Settings" textAlignment="CENTER" textFill="#720808" wrapText="true">
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="Palatino Linotype" size="15.0" />
+                    </font>
+                </Button>
+            </items>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" />
+            </BorderPane.margin>
+        </ToolBar>
+    </left>
+    <center>
+        <BorderPane fx:id="playBorderPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

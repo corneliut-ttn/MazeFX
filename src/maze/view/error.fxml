@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="380.0" maxWidth="550.0" minHeight="380.0" minWidth="550.0" prefHeight="380.0" prefWidth="550.0" style="-fx-background-image: url(&quot;file:///D:/UAIC-ComputerScience/UAIC/AnII-Sem2/PA-Java/MazeFX/utils/error.jpg&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maze.controller.ErrorController">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Error! Wrong Data Input." textAlignment="CENTER" textFill="RED" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+   </top>
+   <center>
+      <Label text="I AM SORRY! :(" textFill="RED" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="50.0" />
+         </font>
+         <effect>
+            <MotionBlur />
+         </effect>
+      </Label>
+   </center>
+   <bottom>
+      <Button fx:id="errorButton" alignment="BOTTOM_RIGHT" cancelButton="true" mnemonicParsing="false" onAction="#exit" text="OK." textAlignment="CENTER" BorderPane.alignment="BOTTOM_RIGHT">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="10.0" right="35.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>

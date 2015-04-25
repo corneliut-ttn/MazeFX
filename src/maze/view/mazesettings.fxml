@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="settingsGridPane" prefHeight="462.0" prefWidth="575.0" style="-fx-background-image: url(&quot;file:///D:/UAIC-ComputerScience/UAIC/AnII-Sem2/PA-Java/MazeFX/utils/settings.jpg&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maze.controller.MazeSettingsController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="204.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="86.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="198.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="90.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="187.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="270.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="303.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="374.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" prefHeight="38.0" prefWidth="223.0" text="Maze Settings" textAlignment="CENTER" textFill="#7c2222" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="DokChampa" size="30.0" />
+         </font>
+      </Label>
+      <Label text="Wall fill color" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Room fill color" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Start fill color" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Finish fill color" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Path fill color" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Wall stroke color" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Room stroke color" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Start stroke color" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Finish stroke color" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label text="Path strokecolor" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <font>
+            <Font name="Constantia Bold" size="22.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="wallFillColorPicker" onAction="#setWallFillColor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ColorPicker fx:id="roomFillColorPicker" onAction="#setRoomFillColor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ColorPicker fx:id="startFillColorPicker" onAction="#setStartFillColor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <ColorPicker fx:id="finishFillColorPicker" onAction="#setFinishFillColor" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <ColorPicker fx:id="pathFillColorPicker" onAction="#setPathFillColor" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <ColorPicker fx:id="wallStrokeColorPicker" onAction="#setWallStrokeColor" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <ColorPicker fx:id="roomStrokeColorPicker" onAction="#setRoomStrokeColor" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <ColorPicker fx:id="startStrokeColorPicker" onAction="#setStartStrokeColor" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <ColorPicker fx:id="finishStrokeColorPicker" onAction="#setFinishStrokeColor" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <ColorPicker fx:id="pathStrokeColorPicker" onAction="#setPathStrokeColor" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" onAction="#setColors" text="Ok" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane minHeight="600.0" minWidth="850.0" prefHeight="600.0" prefWidth="850.0" style="-fx-background-image: url(&quot;file:///D:/UAIC-ComputerScience/UAIC/AnII-Sem2/PA-Java/MazeFX/utils/maze.jpg&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="maze.controller.MazeController">
+   <top>
+      <Label fx:id="mazeTitle" text="A-MAZE-ING" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Cambria Math" size="96.0" />
+         </font>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0" startX="0.7571428571428571">
+               <stops>
+                  <Stop color="#b5ebac" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="startGameButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#playMaze" prefHeight="148.0" prefWidth="148.0" style="-fx-background-image: url(&quot;file:///D:/UAIC-ComputerScience/UAIC/AnII-Sem2/PA-Java/MazeFX/utils/startGame.png&quot;); -fx-background-size: 150 150; -fx-background-radius: 14em; -fx-min-height: 3px; -fx-min-width: 3px;" text="Start Game" textFill="#32ab1d" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                   <Reflection />
+               </effect>
+            </Button>
+            <Button fx:id="drawMazeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#drawMaze" prefHeight="145.0" prefWidth="146.0" style="-fx-background-image: url(&quot;file:///D:/UAIC-ComputerScience/UAIC/AnII-Sem2/PA-Java/MazeFX/utils/drawMaze.png&quot;); -fx-background-size: 150 150; -fx-background-radius: 14em; -fx-min-height: 3px; -fx-min-width: 3px;" text="Draw Maze" textAlignment="CENTER" textFill="#ddeb15" textOverrun="CENTER_ELLIPSIS" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <Label alignment="BOTTOM_RIGHT" text="All rights reserved Corneliu Țuțuianu" textAlignment="RIGHT" textFill="WHITE" BorderPane.alignment="BOTTOM_RIGHT">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font>
+      </Label>
+   </bottom>
+</BorderPane>
